@@ -57,7 +57,7 @@ export const fetchUsers = () => async (dispatch) => {
         dispatch(fetchUsersSuccess(sortedUsers));
 
         //Selecting the first user from the list
-        const selectedUser = sortedUsers[0] ?? null;
+        const selectedUser = sortedUsers.length > 0 ? sortedUsers[0] : null;
 
         dispatch(selectUser(selectedUser));
 
