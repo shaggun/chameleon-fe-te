@@ -36,6 +36,16 @@ const fetchUsersFail = (state, action) => {
   };
 };
 
+const setUsersSummary = (state, action) => {
+  return {
+    ...state,
+    lastUserDate: action.lastUserDate,
+    totalTeamMembers: action.totalTeamMembers,
+    totalInvitedUsers: action.totalInvitedUsers,
+    totalPublishedCampaigns: action.totalPublishedCampaigns,
+  };
+};
+
 const selectUSer = (state, action) => {
   return {
     ...state,
@@ -51,7 +61,9 @@ const reducer = (state = initialState, action) => {
       return fetchUsersSuccess(state, action);
     case actionTypes.FETCH_USERS_FAIL:
       return fetchUsersFail(state, action);
-      case actionTypes.SELECT_USER:
+    case actionTypes.SET_USERS_SUMMARY:
+      return setUsersSummary(state, action);
+    case actionTypes.SELECT_USER:
       return selectUSer(state, action);
     default:
       return state;
