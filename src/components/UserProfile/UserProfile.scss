@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.userprofile {
+  width: 200px;
+  margin: auto;
+}
+
+.userprofile__avatar {
+  margin: 25px 0px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}

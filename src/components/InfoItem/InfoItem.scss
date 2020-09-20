@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.infoitem--big {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.infoitem__label--big {
+  color: $light-color;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.infoitem__info--big {
+  color: $dark-color;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.infoitem--small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50px;
+}
+
+.infoitem__label--small {
+  color: $light-color;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.infoitem__info--small {
+  color: $dark-color;
+  font-weight: 700;
+  font-size: 1rem;
+}

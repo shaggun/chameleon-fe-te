@@ -1,5 +1,6 @@
 import React from "react";
 import User from "../User";
+import UserProfile from "../UserProfile";
 import "./UserList.scss";
 import Divider from "../Divider";
 
@@ -16,6 +17,13 @@ const UserList = (props) => {
             return <User user={user} key={id} selectedUser={selectedUser} />;
           })}
         </ul>
+        <span className="userList__userProfile">
+          {selectedUser ? (
+            <UserProfile selectedUser={selectedUser} />
+          ) : (
+            <div>Loading...</div>
+          )}
+        </span>
       </div>
     </div>
   );

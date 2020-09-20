@@ -17,7 +17,10 @@ function App(props) {
     <div className="app">
       <header className="app-header"></header>
       <Summary />
-      <UserList users={usersStore.users} />
+      <UserList
+        users={usersStore.users}
+        selectedUser={usersStore.selectedUser}
+      />
     </div>
   );
 }
