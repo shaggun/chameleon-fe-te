@@ -15,8 +15,15 @@ function App(props) {
 
   return (
     <div className="app">
-      <header className="app-header"></header>
-      <Summary />
+      <div className="app__header"></div>
+      <br />
+      <Summary
+        totalInvitedUsers={usersStore.totalInvitedUsers}
+        totalPublishedCampaigns={usersStore.totalPublishedCampaigns}
+        totalTeamMembers={usersStore.totalTeamMembers}
+        lastUserDate={usersStore.lastUserDate}
+      />
+      <br />
       <UserList
         users={usersStore.users}
         selectedUser={usersStore.selectedUser}

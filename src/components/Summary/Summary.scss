@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.summary {
+  background-color: white;
+  box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.6);
+}
+.summary__items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.summary__title {
+  margin: 0px 0px 10px 25px;
+  padding-top: 10px;
+  color: $light-color;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: left;
+}
