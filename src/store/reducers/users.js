@@ -8,6 +8,7 @@ const initialState = {
   totalInvitedUsers: 0,
   totalPublishedCampaigns: 0,
   users: [],
+  selectedUser: null,
 };
 
 const fetchUsersStart = (state, action) => {
@@ -35,6 +36,13 @@ const fetchUsersFail = (state, action) => {
   };
 };
 
+const selectUSer = (state, action) => {
+  return {
+    ...state,
+    selectedUser: action.selectedUser,
+  };
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.FETCH_USERS_START:
@@ -43,6 +51,8 @@ const reducer = (state = initialState, action) => {
       return fetchUsersSuccess(state, action);
     case actionTypes.FETCH_USERS_FAIL:
       return fetchUsersFail(state, action);
+      case actionTypes.SELECT_USER:
+      return selectUSer(state, action);
     default:
       return state;
   }

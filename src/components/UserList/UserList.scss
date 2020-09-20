@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.userList {
+  background-color: white;
+  box-shadow: 1px 1px 5px 1px rgba(196, 196, 196, 0.6);
+}
+
+.userList__title {
+  margin: 0px 0px 10px 25px;
+  padding-top: 10px;
+  color: $light-color;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.userList__content {
+  display: flex;
+}
+
+.userList__ul {
+  border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+  padding: 0px !important; //Needed to override default padding and margins
+  margin: 0px !important;
+  flex-grow: 4;
+}
+
+.userList__userProfile {
+  flex-grow: 1;
+}

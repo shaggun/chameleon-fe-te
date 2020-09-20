@@ -22,6 +22,14 @@ const fetchUsersFail = (error) => {
   };
 };
 
+export const selectUser = (selectedUser) => {
+  return {
+    type: actionTypes.SELECT_USER,
+    selectedUser,
+  };
+};
+
+
 export const fetchUsers = () => async (dispatch) => {
   dispatch(fetchUsersStart());
 
@@ -33,6 +41,11 @@ export const fetchUsers = () => async (dispatch) => {
         const sortedUsers = orderBy(response.data, ["created_at"], ["asc"]);
 
         dispatch(fetchUsersSuccess(sortedUsers));
+
+          //Selecting the first user from the list
+          const selectedUser = sortedUsers[0] ?? null;
+
+          dispatch(selectUser(selectedUser));
       }
     })
     .catch((e) => {

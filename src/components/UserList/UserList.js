@@ -1,19 +1,23 @@
 import React from "react";
+import User from "../User";
+
+import "./UserList.scss";
+
 
 const UserList = (props) => {
-  const { users } = props;
+  const { users, selectedUser } = props;
 
   return (
-    <div>
-      <ul>
-        {users.map((user, id) => {
-          return (
-            <li user={user} key={id}>
-              {user.name}
-            </li>
-          );
-        })}
-      </ul>
+    <div className="userList">
+      <div className="userList__title">Users</div>
+ 
+      <div className="userList__content">
+        <ul className="userList__ul">
+          {users.map((user, id) => {
+            return <User user={user} key={id} selectedUser={selectedUser} />;
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

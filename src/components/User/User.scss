@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+  height: 50px;
+  &:hover {
+    cursor: pointer;
+    background-color: #f3f4f9;
+    border: none;
+  }
+  &:active {
+    background-color: #cccccc;
+    border: none;
+  }
+}
+
+.user--selected {
+  background-color: #ececec;
+}
+
+.user--unselected {
+  background-color: white;
+}
+
+.user__name {
+  color: $dark-color;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-left: 10px;
+}
+
+.user__avatar {
+  margin-left: 25px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
