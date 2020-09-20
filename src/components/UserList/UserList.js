@@ -1,8 +1,7 @@
 import React from "react";
 import User from "../User";
-
 import "./UserList.scss";
-
+import Divider from "../Divider";
 
 const UserList = (props) => {
   const { users, selectedUser } = props;
@@ -10,7 +9,7 @@ const UserList = (props) => {
   return (
     <div className="userList">
       <div className="userList__title">Users</div>
- 
+      <Divider />
       <div className="userList__content">
         <ul className="userList__ul">
           {users.map((user, id) => {
